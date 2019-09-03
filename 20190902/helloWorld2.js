@@ -1,7 +1,13 @@
 const http=require("http");
 
-var server=http.createServer(function(require,res){
-    res.write("hello world");
+var server=http.createServer(function(req,res){
+    /*
+    *http协议，协议的结构 协议的请求响应过程
+    *状态码
+    */
+    res.writeHead(200,{"Content-Type":"text/plain"});
+    res.write("<h1>hello world</h1>");
+    //响应结束
     res.end();
 });//第一个参数请求对象，第二个参数响应对象
 
