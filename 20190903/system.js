@@ -22,7 +22,7 @@ var  server=http.createServer(function(req,res){//客户端发起请求访问808
 
     //console.log(sys);
 
-    var htmlContent=fs.readFileSync(htmlPath);
+    var htmlPath=fs.readFileSync(htmlPath);
     console.log(htmlPath);
     htmlContent=htmlContent.toString("utf8");
     res.writeHead(200,{"Content-Type":"text/html"});
