@@ -1,14 +1,13 @@
 var c={circumference:"circumference",area:"area"};
 var a=1;
 function Circumference(){
-    c.circumference=a*2*3.14;
+    return a*2*Math.PI;
 }
-Circumference();
+c.circumference=Circumference(1);
 function area(){
-    c.area=3.14*a*a;
+    return Math.PI*a*a;
 }
-area();
-console.log(c);
+c.area=area(1);
 module.exports={
     c:c
 }

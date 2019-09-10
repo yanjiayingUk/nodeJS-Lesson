@@ -2,10 +2,10 @@
 function circleFun(r){
     a={};
     var circleModule=function(){
-        a.circumferense=r*2*3.14;
+        a.circumferense=r*2*Math.PI;
     }
     var area=function(){
-        a.area=3.14*r*r;
+        a.area=Math.PI*r*r;
     }
     circleModule();
     area();
