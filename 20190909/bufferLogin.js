@@ -5,6 +5,7 @@ console.log(userName,password);
 if(userName!=undefined && password!=undefined){
     var loginStr=userName+":"+password;
     var buf1=Buffer.from(loginStr,"utf-8");
+    console.log(buf1);
     var base64Str=buf1.toString("base64");
     console.log(base64Str);
 }

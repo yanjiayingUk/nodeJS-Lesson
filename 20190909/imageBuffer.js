@@ -11,7 +11,7 @@ http.createServer(function(req,res){
     var imgBuffer=fs.readFileSync(imgPath);
     var base64Data=imgBuffer.toString("base64");
     var imgSrc="data:image/jpeg;base64,"+base64Data;
-    var htmlSrc="<!DOCTYPE html><head></head>"+"<body><img src='"+imgSrc+"' /></body>"+
+    var htmlSrc="<!DOCTYPE html><head></head>"+"<body><img src='"+imgSrc+"' /></body>"+//实验证明，这些就是一个大字符串中间部分"和,可去掉
     "</html>";
     //console.log(base64Data);
     res.writeHead(200,{"Content-Type":"text/html"});

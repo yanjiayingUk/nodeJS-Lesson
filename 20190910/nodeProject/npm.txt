@@ -1,0 +1,11 @@
+1.输入质量高npm init
+2.按提示输入，敲回车
+3.初始化完成后会有一个package.json文件（当前初始化描述信息）
+4.可以使用npm install 模块名 --save-dev就可以将安装模块的信息存入到package.json文件中
+5.如果在其他文件中需要用到相同模块，只需移入相应package.json文件，使用npm install
+
+1.nrm用来管理第三方模块的下载镜像，安装nrm用npm install nrm -g
+  nrm ls 查看所有的镜像
+  nrm use 镜像名字 来切换服务器
+
+  当原来服务器不存在某个模块，或者下载速度很慢时，可以尝试切换下载服务器
