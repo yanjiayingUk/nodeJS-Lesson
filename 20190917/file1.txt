@@ -1,0 +1,9 @@
+
+//带有Sync表示同步的方法，不带的基本上是异步
+var fileContent= fs.readFileSync(filePath);
+console.timeEnd("test");
+var fileContent1= fs.readFileSync(filePath1);
+console.log(fileContent.toString());
+console.log(fileContent1.toString());
+console.log("read end");
+
