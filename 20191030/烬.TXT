@@ -1,0 +1,12 @@
+npm install -g express  全局安装express框架
+npm install -g express-generator
+express -e HelloExpress                   创建HelloExpress项目的两种方式
+express --view=egj HelloExpress    指明的其实是视图模板
+
+
+bin下www就是启动文件
+依赖在package.json文件中
+进入HelloExpress文件目录下，npm install则根据package.json文件安装模块
+
+
+npm start 和node ./bin/www等效
