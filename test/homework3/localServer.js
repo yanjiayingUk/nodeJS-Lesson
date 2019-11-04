@@ -19,7 +19,7 @@ http.createServer(function(req,res){
             showHome(req,res);
             break;
     }
-}).listen(8082);
+}).listen(8081);
 console.log("server is listening 8081")
 
 function showLogin(res){
