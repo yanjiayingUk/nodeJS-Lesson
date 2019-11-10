@@ -8,16 +8,11 @@ const querystring=require("querystring");
 http.createServer(function(req,res){
     var urlObj=url.parse(req.url,true);
     var pathName=urlObj.pathname;
-    switch(pathName){
-        case "/":
-            showLogin(res);
-            break;
-        case "/login":
-            loginIn(req,res);
-            break;
-        case "/home":
-            showHome(req,res);
-            break;
+    if(pathName=="/login" && req.method=="GET"){
+        showLogin(res);
+    }
+    else if(pathName=="/login" && req.method=="POST"){
+        loginIn(req,res);
     }
 }).listen(8081);
 console.log("server is listening 8081")
@@ -67,18 +62,6 @@ function loginIn(req,res){
     })
 }
 
-function showHome(req,res){
-    var cookie=req.headers["cookie"];
-    if(cookie==undefined){
-        showLogin(res);
-    }
-    else if(cookie.indexOf("username=")>=0){
-        res.end("home page");
-    }
-    else{
-        showLogin(res);
-    }
-}
 
 // 若关掉服务，重新启动程序，则之前的登录次数还在
 // HTTP Cookie是服务器发送到用户浏览器并保存在本地的一小块数据，它会在浏览器下次向同一服务器再发起请求时被携带并发送到服务器上。
